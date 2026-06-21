@@ -1,0 +1,90 @@
+[
+  {
+    "id": "kick_carousel",
+    "format": "carousel",
+    "status": "pending",
+    "scheduled_at": "2026-06-19T12:00:00Z",
+    "platforms": [
+      "instagram"
+    ],
+    "media": [
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/NB1_cover.png",
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/NB2_gofos.png",
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/NB3_beat.png",
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/NB4_gonato.png",
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/NB5_test.png",
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/NB6_cta.png"
+    ],
+    "caption": "Το χτύπημα ποδιών δεν σε πάει μπροστά — σε κρατάει ψηλά. 🏊\n\n3 πράγματα που αλλάζουν τα πόδια σου:\n• Ξεκίνα από τον γοφό, όχι το γόνατο\n• Διάλεξε 2-beat (αντοχή) ή 6-beat (σπριντ) σκόπιμα\n• Λυγισμένο γόνατο = φρένο\n\nΚάνε το τεστ — 25μ μόνο πόδια — και στείλε βίντεο στο DM (γράψε «FLOW») για δωρεάν παρατήρηση.\n\n#κολυμβηση #swimtechnique #kick #τεχνικη #triathlon #flowstateswimlab"
+  },
+  {
+    "id": "r4_strokecount",
+    "format": "reel",
+    "status": "pending",
+    "scheduled_at": "2026-06-20T18:00:00Z",
+    "platforms": [
+      "instagram"
+    ],
+    "media": [
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/R4_strokecount.mp4"
+    ],
+    "caption": "Μέτρα χεριές. Όχι προσπάθεια. 🏊\n\nΛιγότερες χεριές στα 25μ = καλύτερο streamline & catch — όχι πιο δυνατό τράβηγμα.\n\nΠόσες χεριές κάνεις σε ένα 25άρι; Γράψε στο DM.\n\n#κολυμβηση #swimtechnique #τεχνικη #triathlon #flowstateswimlab"
+  },
+  {
+    "id": "r6_pacing",
+    "format": "reel",
+    "status": "pending",
+    "scheduled_at": "2026-06-21T18:00:00Z",
+    "platforms": [
+      "instagram"
+    ],
+    "media": [
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/R6_pacing.mp4"
+    ],
+    "caption": "Ο ρυθμός αγώνα είναι νούμερο. Όχι αίσθηση. 🏊\n\nStroke rate + χεριές. Αν δεν τα ξέρεις, μαντεύεις στον αγώνα.\n\nΔες το στην επόμενη προπόνηση.\n\n#κολυμβηση #swimtechnique #pacing #triathlon #flowstateswimlab"
+  },
+  {
+    "id": "cta_analysis",
+    "format": "image",
+    "status": "pending",
+    "scheduled_at": "2026-06-22T17:00:00Z",
+    "platforms": [
+      "instagram"
+    ],
+    "media": [
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/CTA_intro.png"
+    ],
+    "caption": "Δωρεάν παρατήρηση τεχνικής. 🏊\n\nΣτείλε ένα πλάγιο βίντεο 10\" στο DM (γράψε «FLOW») — παίρνεις 3 σημεία να δουλέψεις, χωρίς δέσμευση.\n\n#κολυμβηση #swimtechnique #τεχνικη #triathlon #flowstateswimlab"
+  },
+  {
+    "id": "r5_raceday",
+    "format": "reel",
+    "status": "pending",
+    "scheduled_at": "2026-06-23T18:00:00Z",
+    "platforms": [
+      "instagram"
+    ],
+    "media": [
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/R5_raceday.mp4"
+    ],
+    "caption": "Γρήγορος στην προπόνηση, αργός στον αγώνα; 🏊\n\nΣυνήθως φταίει η «γενική» προπόνηση. Ο αγώνας θέλει ρυθμό αγώνα — όχι μόνο όγκο.\n\nΘες πλάνο για το event σου; Στείλε «PLAN» στο DM.\n\n#κολυμβηση #raceday #triathlon #τεχνικη #flowstateswimlab"
+  },
+  {
+    "id": "podia_carousel",
+    "format": "carousel",
+    "status": "pending",
+    "scheduled_at": "2026-06-24T18:00:00Z",
+    "platforms": [
+      "instagram"
+    ],
+    "media": [
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/C1_cover.png",
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/C2_kefali.png",
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/C3_gofoi.png",
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/C4_podia.png",
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/C5_test.png",
+      "https://cdn.jsdelivr.net/gh/cx6s2wvrx2-glitch/flowstate-assets@main/media/C6_cta.png"
+    ],
+    "caption": "Γιατί βυθίζονται τα πόδια σου 🏊\n\nΑν βυθίζονται τα πόδια σου, μην κοιτάς τα πόδια. 9 στις 10 φορές το λάθος είναι ψηλά — στο κεφάλι.\n\n3 σημεία για σωστό streamline → swipe.\n\n📩 Στείλε πλάγιο βίντεο 10\" στο DM (γράψε «FLOW») για δωρεάν παρατήρηση.\n\n#κολυμβηση #swimtechnique #streamline #τεχνικη #triathlon #flowstateswimlab"
+  }
+]

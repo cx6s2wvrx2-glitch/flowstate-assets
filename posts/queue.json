@@ -2,7 +2,7 @@
   {
     "id": "caro-00-000",
     "format": "carousel",
-    "status": "publishing",
+    "status": "failed",
     "scheduled_at": "2026-09-27T06:00:00Z",
     "platforms": [
       "instagram"
@@ -15,7 +15,8 @@
       "https://raw.githubusercontent.com/cx6s2wvrx2-glitch/flowstate-assets/main/c00_4.png",
       "https://raw.githubusercontent.com/cx6s2wvrx2-glitch/flowstate-assets/main/c00_5.png"
     ],
-    "caption": "Η άσκηση με κλειστές γροθιές μειώνει την επιφάνεια του χεριού και σε αναγκάζει να αναζητήσεις καλύτερη αίσθηση πίεσης με τον πήχη και πιο σταθερή θέση σώματος. Δεν είναι άσκηση για να κολυμπάς γρήγορα. Είναι εργαλείο αντίληψης και τεχνικής. Χρησιμοποίησέ τη σε μικρά κομμάτια και μετά γύρνα αμέσως σε κανονικό ελεύθερο, ώστε να μεταφέρεις την αίσθηση στη χεριά.\n\nΓράψε «ΤΕΧΝΙΚΗ» στα σχόλια και θα σου στείλω τον οδηγό «Πώς να κατεβάσεις 3–10″ στα 100 μ.»"
+    "caption": "Η άσκηση με κλειστές γροθιές μειώνει την επιφάνεια του χεριού και σε αναγκάζει να αναζητήσεις καλύτερη αίσθηση πίεσης με τον πήχη και πιο σταθερή θέση σώματος. Δεν είναι άσκηση για να κολυμπάς γρήγορα. Είναι εργαλείο αντίληψης και τεχνικής. Χρησιμοποίησέ τη σε μικρά κομμάτια και μετά γύρνα αμέσως σε κανονικό ελεύθερο, ώστε να μεταφέρεις την αίσθηση στη χεριά.\n\nΓράψε «ΤΕΧΝΙΚΗ» στα σχόλια και θα σου στείλω τον οδηγό «Πώς να κατεβάσεις 3–10″ στα 100 μ.»",
+    "error": "400 {\"error\":{\"message\":\"Unsupported post request. Object with ID '17841465653746505' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https:\\/\\/developers.facebook.com\\/docs\\/graph-api\",\"type\":\"GraphMethodExcepti"
   },
   {
     "id": "reel-00-001",

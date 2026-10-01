@@ -2,7 +2,7 @@
   {
     "id": "pin-01",
     "format": "carousel",
-    "status": "publishing",
+    "status": "published",
     "scheduled_at": "2026-08-01T06:00:00Z",
     "platforms": [
       "instagram"
@@ -12,7 +12,9 @@
       "https://raw.githubusercontent.com/cx6s2wvrx2-glitch/flowstate-assets/main/pin1_1.png",
       "https://raw.githubusercontent.com/cx6s2wvrx2-glitch/flowstate-assets/main/pin1_2.png"
     ],
-    "caption": "🌊 Flowstate Swim Lab — online coaching & personal training στην πισίνα.\n\nΓια τρίαθλο, open water, masters και κολυμβητές που θέλουν ουσιαστική βελτίωση στο νερό: καθαρότερη τεχνική, καλύτερο ρυθμό, σαφή δομή — δουλειά πάνω στον ΔΙΚΟ σου στόχο.\n\n👉 Στείλε «ΠΛΑΝΟ» σε DM ή κλείσε δωρεάν 15' συμβουλευτική (link στο bio)."
+    "caption": "🌊 Flowstate Swim Lab — online coaching & personal training στην πισίνα.\n\nΓια τρίαθλο, open water, masters και κολυμβητές που θέλουν ουσιαστική βελτίωση στο νερό: καθαρότερη τεχνική, καλύτερο ρυθμό, σαφή δομή — δουλειά πάνω στον ΔΙΚΟ σου στόχο.\n\n👉 Στείλε «ΠΛΑΝΟ» σε DM ή κλείσε δωρεάν 15' συμβουλευτική (link στο bio).",
+    "ig_post_id": "17915517255262224",
+    "published_at": "2026-10-01T13:22:22.026562+00:00"
   },
   {
     "id": "pin-02",

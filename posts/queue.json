@@ -19,7 +19,7 @@
   {
     "id": "pin-02",
     "format": "carousel",
-    "status": "publishing",
+    "status": "published",
     "scheduled_at": "2026-08-01T06:01:00Z",
     "platforms": [
       "instagram"
@@ -29,7 +29,9 @@
       "https://raw.githubusercontent.com/cx6s2wvrx2-glitch/flowstate-assets/main/pin2_1.png",
       "https://raw.githubusercontent.com/cx6s2wvrx2-glitch/flowstate-assets/main/pin2_2.png"
     ],
-    "caption": "🧭 Πώς δουλεύουμε στο Flowstate.\n\nIntro session → αξιολόγηση → εξατομικευμένο πλάνο → weekly guidance. Εξατομικευμένο μηνιαίο πρόγραμμα, εβδομαδιαία επικοινωνία, video feedback, τεχνική ανάλυση, δύναμη & διατροφή — όλα μαζί για καλύτερη απόδοση.\n\n👉 Στείλε «ΠΛΑΝΟ» σε DM."
+    "caption": "🧭 Πώς δουλεύουμε στο Flowstate.\n\nIntro session → αξιολόγηση → εξατομικευμένο πλάνο → weekly guidance. Εξατομικευμένο μηνιαίο πρόγραμμα, εβδομαδιαία επικοινωνία, video feedback, τεχνική ανάλυση, δύναμη & διατροφή — όλα μαζί για καλύτερη απόδοση.\n\n👉 Στείλε «ΠΛΑΝΟ» σε DM.",
+    "ig_post_id": "18383982250227491",
+    "published_at": "2026-10-01T13:28:04.913182+00:00"
   },
   {
     "id": "pin-03",

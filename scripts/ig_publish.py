@@ -1,29 +1,36 @@
 # -*- coding: utf-8 -*-
-"""Flowstate IG publisher — auto-resolves Page token + posts only at 09:00 & 17:00 Athens."""
+"""Flowstate IG publisher — 1 πρωί + 1 απόγευμα/μέρα, ανθεκτικό στις καθυστερήσεις cron."""
 import os, json, time, datetime, subprocess
 import requests
+from zoneinfo import ZoneInfo
 
 GRAPH = "https://graph.facebook.com/v21.0"
 IG_USER_ID = "17841465653746505"
 TOKEN = os.environ["IG_ACCESS_TOKEN"]
 QUEUE = "posts/queue.json"
-POST_HOURS = (9, 17)  # ώρες Ελλάδας που επιτρέπεται να ανεβάσει
-
-def athens_hour():
-    try:
-        from zoneinfo import ZoneInfo
-        return datetime.datetime.now(ZoneInfo("Europe/Athens")).hour
-    except Exception:
-        # fallback: UTC+3 (καλοκαίρι) / UTC+2 (χειμώνας), προσεγγιστικά
-        m = datetime.datetime.utcnow().month
-        off = 3 if 4 <= m <= 10 else 2
-        return (datetime.datetime.utcnow().hour + off) % 24
+TZ = ZoneInfo("Europe/Athens")
+AM_WINDOW = range(6, 13)    # πρωί: 06:00–12:59 Ελλάδας
+PM_WINDOW = range(13, 23)   # απόγευμα/βράδυ: 13:00–22:59 Ελλάδας
 
 def now(): return datetime.datetime.now(datetime.timezone.utc)
 def load():
     with open(QUEUE, encoding="utf-8") as f: return json.load(f)
 def save(q):
     with open(QUEUE, "w", encoding="utf-8") as f: json.dump(q, f, ensure_ascii=False, indent=2)
+
+def slots_published_today(q, a):
+    slots = set()
+    for p in q:
+        pa = p.get("published_at")
+        if not pa: continue
+        try:
+            d = datetime.datetime.fromisoformat(pa)
+            if d.tzinfo is None: d = d.replace(tzinfo=datetime.timezone.utc)
+            la = d.astimezone(TZ)
+            if la.date() == a.date():
+                slots.add("am" if la.hour < 13 else "pm")
+        except Exception: pass
+    return slots
 
 def resolve_token():
     global TOKEN, IG_USER_ID
@@ -40,7 +47,7 @@ def resolve_token():
             if iba.get("id"): IG_USER_ID = str(iba["id"])
             if pg.get("access_token"): TOKEN = pg["access_token"]
             print("Resolved PAGE token for IG", IG_USER_ID); return
-    print("No matching page via /me/accounts — using provided token as-is.")
+    print("No matching page — using provided token.")
 
 def _post(path, data):
     r = requests.post(f"{GRAPH}/{path}", data={**data, "access_token": TOKEN}, timeout=60)
@@ -56,15 +63,15 @@ def wait_ready(cid, timeout=420):
     while time.time() - t0 < timeout:
         sc = _get(cid, {"fields": "status_code"}).get("status_code")
         if sc == "FINISHED": return
-        if sc == "ERROR": raise RuntimeError("container processing ERROR")
+        if sc == "ERROR": raise RuntimeError("container ERROR")
         time.sleep(6)
-    raise TimeoutError("container not ready in time")
+    raise TimeoutError("container not ready")
 
 def publish(p):
     fmt, cap, media = p["format"], p.get("caption", ""), p["media"]
     if fmt == "carousel":
-        children = [_post(f"{IG_USER_ID}/media", {"image_url": u, "is_carousel_item": "true"})["id"] for u in media]
-        cid = _post(f"{IG_USER_ID}/media", {"media_type": "CAROUSEL", "children": ",".join(children), "caption": cap})["id"]
+        ch = [_post(f"{IG_USER_ID}/media", {"image_url": u, "is_carousel_item": "true"})["id"] for u in media]
+        cid = _post(f"{IG_USER_ID}/media", {"media_type": "CAROUSEL", "children": ",".join(ch), "caption": cap})["id"]
         try: wait_ready(cid, 150)
         except Exception: pass
     elif fmt == "image":
@@ -76,18 +83,26 @@ def publish(p):
         raise ValueError(f"unknown format: {fmt}")
     return _post(f"{IG_USER_ID}/media_publish", {"creation_id": cid})["id"]
 
-def git(*args): subprocess.run(["git", *args], check=True)
+def git(*a): subprocess.run(["git", *a], check=True)
 def commit(msg):
     git("config", "user.name", "flowstate-bot"); git("config", "user.email", "bot@flowstate.local")
     git("add", QUEUE); git("commit", "-m", msg); git("push")
 
 def main():
-    # ΦΡΟΥΡΟΣ ΩΡΑΣ: στα προγραμματισμένα τρεξίματα, ανέβασε μόνο 09:00 ή 17:00 Ελλάδας.
+    a = datetime.datetime.now(TZ)
     event = os.environ.get("GITHUB_EVENT_NAME", "")
-    if event == "schedule" and athens_hour() not in POST_HOURS:
-        print(f"Εκτός ώρας (Athens hour {athens_hour()}). Δεν ανεβάζω."); return
     resolve_token()
     q = load(); n = now()
+
+    # Χειροκίνητο = πάντα· προγραμματισμένο = 1 πρωί + 1 απόγευμα, ανά παράθυρο
+    if event == "schedule":
+        if a.hour in AM_WINDOW: slot = "am"
+        elif a.hour in PM_WINDOW: slot = "pm"
+        else:
+            print(f"Εκτός παραθύρου (Athens hour {a.hour})."); return
+        if slot in slots_published_today(q, a):
+            print(f"Ήδη ανέβηκε στο slot {slot} σήμερα. Skip."); return
+
     due = [p for p in q if p.get("status") == "pending"
            and datetime.datetime.fromisoformat(p["scheduled_at"].replace("Z", "+00:00")) <= n]
     if not due:
@@ -97,7 +112,7 @@ def main():
     print(f"Due: {p['id']} ({p['format']})")
     p["status"] = "publishing"; save(q)
     try: commit(f"lock {p['id']}")
-    except Exception as e: print("Lock commit failed:", e); return
+    except Exception as e: print("Lock failed:", e); return
     try:
         mid = publish(p)
         p["status"] = "published"; p["ig_post_id"] = mid; p["published_at"] = n.isoformat()

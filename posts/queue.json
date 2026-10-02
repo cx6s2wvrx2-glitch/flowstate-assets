@@ -220,7 +220,7 @@
   {
     "id": "reel-03-010",
     "format": "reel",
-    "status": "pending",
+    "status": "publishing",
     "scheduled_at": "2026-10-02T06:00:00Z",
     "platforms": [
       "instagram"

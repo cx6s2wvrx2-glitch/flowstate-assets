@@ -335,7 +335,7 @@
   {
     "id": "imag-05-017",
     "format": "image",
-    "status": "pending",
+    "status": "publishing",
     "scheduled_at": "2026-10-05T14:00:00Z",
     "platforms": [
       "instagram"

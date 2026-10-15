@@ -485,7 +485,7 @@
   {
     "id": "imag-08-026",
     "format": "image",
-    "status": "pending",
+    "status": "publishing",
     "scheduled_at": "2026-10-10T06:00:00Z",
     "platforms": [
       "instagram"

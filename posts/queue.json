@@ -735,7 +735,7 @@
   {
     "id": "imag-13-041",
     "format": "image",
-    "status": "pending",
+    "status": "publishing",
     "scheduled_at": "2026-10-17T14:00:00Z",
     "platforms": [
       "instagram"

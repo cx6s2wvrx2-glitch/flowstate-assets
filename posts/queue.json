@@ -769,7 +769,7 @@
   {
     "id": "imag-14-043",
     "format": "image",
-    "status": "pending",
+    "status": "publishing",
     "scheduled_at": "2026-10-18T14:00:00Z",
     "platforms": [
       "instagram"

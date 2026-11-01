@@ -803,7 +803,7 @@
   {
     "id": "imag-15-045",
     "format": "image",
-    "status": "publishing",
+    "status": "failed",
     "scheduled_at": "2026-10-19T14:00:00Z",
     "platforms": [
       "instagram"
@@ -811,7 +811,8 @@
     "media": [
       "https://raw.githubusercontent.com/cx6s2wvrx2-glitch/flowstate-assets/main/v15.png"
     ],
-    "caption": "Η προπόνηση δεν τελειώνει όταν βγεις από το νερό. Ο ύπνος, η επαρκής ενέργεια, οι υδατάνθρακες, η πρωτεΐνη και η ενυδάτωση καθορίζουν σε μεγάλο βαθμό πόσο καλά θα απορροφήσεις το ερέθισμα. Καμία συσκευή recovery δεν μπορεί να καλύψει χρόνια έλλειψη ύπνου ή ανεπαρκές φαγητό. Πριν κυνηγήσεις «advanced» μεθόδους αποκατάστασης, βάλε πρώτα σε τάξη τα βασικά."
+    "caption": "Η προπόνηση δεν τελειώνει όταν βγεις από το νερό. Ο ύπνος, η επαρκής ενέργεια, οι υδατάνθρακες, η πρωτεΐνη και η ενυδάτωση καθορίζουν σε μεγάλο βαθμό πόσο καλά θα απορροφήσεις το ερέθισμα. Καμία συσκευή recovery δεν μπορεί να καλύψει χρόνια έλλειψη ύπνου ή ανεπαρκές φαγητό. Πριν κυνηγήσεις «advanced» μεθόδους αποκατάστασης, βάλε πρώτα σε τάξη τα βασικά.",
+    "error": "400 {\"error\":{\"message\":\"Media ID is not available\",\"type\":\"OAuthException\",\"code\":9007,\"error_subcode\":2207027,\"is_transient\":false,\"error_user_title\":\"Cannot publish\",\"error_user_msg\":\"The media is not ready to be published. Please wait a moment.\",\"fbtrace_id\":\"AWuNUwd7pyV2XIwKydRnjZk\"}}"
   },
   {
     "id": "caro-16-046",

@@ -841,7 +841,7 @@
   {
     "id": "imag-16-047",
     "format": "image",
-    "status": "pending",
+    "status": "publishing",
     "scheduled_at": "2026-10-20T14:00:00Z",
     "platforms": [
       "instagram"

@@ -910,7 +910,7 @@
   {
     "id": "imag-18-051",
     "format": "image",
-    "status": "pending",
+    "status": "publishing",
     "scheduled_at": "2026-10-22T14:00:00Z",
     "platforms": [
       "instagram"

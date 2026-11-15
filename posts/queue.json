@@ -1117,7 +1117,7 @@
   {
     "id": "imag-24-063",
     "format": "image",
-    "status": "pending",
+    "status": "publishing",
     "scheduled_at": "2026-10-28T15:00:00Z",
     "platforms": [
       "instagram"

@@ -1256,7 +1256,7 @@
   {
     "id": "imag-28-071",
     "format": "image",
-    "status": "pending",
+    "status": "publishing",
     "scheduled_at": "2026-11-01T15:00:00Z",
     "platforms": [
       "instagram"
